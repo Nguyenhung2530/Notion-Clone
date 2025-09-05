@@ -1,0 +1,67 @@
+
+### Register user
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "buonvcl",
+  "email": "buondoi@example.com",
+  "password": "123456",
+  "role":"admin"
+}
+
+### Login user
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "buondoi@example.com",
+  "password": "123456"
+}
+
+### Refresh access token
+POST http://localhost:5000/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "PASTE_REFRESH_TOKEN_HERE"
+}
+
+---
+
+### ============================
+### USER CRUD 
+### ============================
+
+### Get all users (admin only)
+GET http://localhost:5000/api/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YmFiZGQ5MTdjOGFkMzIyOTM0MjlkZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU3MDY4Nzg5LCJleHAiOjE3NTcwNjk2ODl9.QUCEtU8CN7wxoOEYkffI6cE3zvplf7eyayzEud21HOE
+
+### Get user by id
+GET http://localhost:5000/api/v1/users/PASTE_USER_ID_HERE
+Authorization: Bearer PASTE_ACCESS_TOKEN_HERE
+
+### Create new user (admin only)
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+Authorization: Bearer PASTE_ACCESS_TOKEN_HERE
+
+{
+  "username": "newuser",
+  "email": "newuser@example.com",
+  "password": "123456",
+  "role": "user"
+}
+
+### Update user
+PUT http://localhost:5000/api/v1/users/PASTE_USER_ID_HERE
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YmFiY2NkMjU3ZTE5NDg5NTM3ZmJjNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU3MDY4NTI5LCJleHAiOjE3NTcwNjk0Mjl9.y5bJElJzKR_t_T6Nhc4AzOqUghoiHbhhegcjaVUTq6w
+
+{
+  "username": "hungdz253"
+}
+
+### Delete user (admin only)
+DELETE http://localhost:5000/api/v1/users/PASTE_USER_ID_HERE
+Authorization: Bearer PASTE_ACCESS_TOKEN_HERE
