@@ -33,7 +33,7 @@ Content-Type: application/json
 ### USER CRUD 
 ### ============================
 
-### Get all users (admin only)
+### Get all users 
 GET http://localhost:5000/api/v1/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YmFiZGQ5MTdjOGFkMzIyOTM0MjlkZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU3MDY4Nzg5LCJleHAiOjE3NTcwNjk2ODl9.QUCEtU8CN7wxoOEYkffI6cE3zvplf7eyayzEud21HOE
 
@@ -41,7 +41,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YmFiZGQ5M
 GET http://localhost:5000/api/v1/users/PASTE_USER_ID_HERE
 Authorization: Bearer PASTE_ACCESS_TOKEN_HERE
 
-### Create new user (admin only)
+### Create new user
 POST http://localhost:5000/api/v1/users
 Content-Type: application/json
 Authorization: Bearer PASTE_ACCESS_TOKEN_HERE
